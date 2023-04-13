@@ -1,8 +1,8 @@
 var age = document.getElementById("age");
 var height = document.getElementById("height");
 var weight = document.getElementById("weight");
-var male = document.getElementById("m");
-var female = document.getElementById("f");
+var male = document.getElementById("option-1");
+var female = document.getElementById("option-2");
 var form = document.getElementById("form");
 
 function validateForm() {
@@ -20,6 +20,7 @@ function validateForm() {
         countBmi();
     }
 }
+
 document.getElementById("submit").addEventListener("click", validateForm);
 
 function countBmi() {
@@ -30,7 +31,7 @@ function countBmi() {
         p.push("female");
     }
     form.reset();
-    var bmi = Number(p[2]) / (((Number(p[1]) / 100) * Number(p[1])) / 100);
+    var bmi = (p[2]) / ((((p[1]) / 100) * (p[1])) / 100);
     var result = "";
     if (bmi < 18.5) {
         result = "Underweight";
@@ -46,7 +47,7 @@ function countBmi() {
     var h1 = document.createElement("h1");
     var h2 = document.createElement("h2");
     var t = document.createTextNode(result);
-    var b = document.createTextNode("BMI: ");
+    var b = document.createTextNode("BMI : ");
     var r = document.createTextNode(parseFloat(bmi).toFixed(2));
     h1.appendChild(t);
     h2.appendChild(b);
