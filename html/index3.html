@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/style3.css">
+</head>
+
+<body>
+    <main>
+        <h3>BMI Calculator</h3>
+        <form class="form" id="form" onsubmit="return validateForm()">
+            <div class="top">
+                <div class="text">
+                    <p class="age">Age</p>
+                    <p class="gender">Gender</p>
+                </div>
+                <div class="input-data">
+                    <input type="number" id="age" class="input-age" autocomplete="off" required/>
+                    <input type="radio" name="select" id="option-1">
+                    <input type="radio" name="select" id="option-2">
+                    <label for="option-1" class="option option-1">
+                        <div class="dot"></div>
+                         <span>Male</span>
+                         </label>
+                    <label for="option-2" class="option option-2">
+                        <div class="dot"></div>
+                         <span>Female</span>
+                      </label>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="height">
+                    <p class="text-bottom">Height (cm)</p>
+                    <input type="number" class="input-height" id="height" autocomplete="off" required/>
+                </div>
+                <div class="weight">
+                    <p class="text-bottom">Weight (kg)</p>
+                    <input type="number" class="input-weight" id="weight" autocomplete="off" required/>
+                </div>
+            </div>
+            <div class="btn">
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script src="/js/script2.js"></script>
+</body>
+
+</html>
